@@ -16,7 +16,7 @@ user node['rstudio-server']['rstudio_user'] do
   comment "RStudio User"
   home "/home/#{node['rstudio-server']['rstudio_user']}"
   gid node['rstudio-server']['rserve_user_group']
-  password node['rstudio-server']['rstudio_user_pwd']
+  password node['rstudio-server']['rstudio_user_password']
   shell '/bin/bash'
   system true
 end
