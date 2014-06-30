@@ -12,4 +12,5 @@ default['rstudio-server']['arch'] = "i386"
 default['rstudio-server']['source_url'] = "http://download2.rstudio.org/"
 
 default['rstudio-server']['rstudio_user'] = "rstudio"
-default['rstudio-server']['rstudio_password'] = "rstudio"
+default['rstudio-server']['rstudio_user_group'] = "rstudio"
+default['rstudio-server']['rstudio_user_pwd'] = "rstudio"

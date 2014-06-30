@@ -1,5 +1,5 @@
 #
-# Author:: Stephen Frank (<nicholas.long@.nrel.gov>)
+# Author:: Stephen Frank (<stephen.frank@.nrel.gov>)
 # Cookbook Name:: rstudio-server
 # Recipe:: default
 #
@@ -20,7 +20,7 @@ case node['platform_family']
 end
 include_recipe "r"
 
-# Version and Architecture
+# Version and architecture strings
 version = node['rstudio-server']['version']
 arch = node['rstudio-server']['arch']
 
@@ -34,10 +34,14 @@ case node['platform_family']
       #checksum node['rstudio-server']['checksum']
     end
     # Install
-    dpkg_package "rstudio-server" do
+    gdebi_package "rstudio-server" do
       source "/tmp/rstudio-server-#{version}-#{arch}.deb"
       action :install
     end
   when "rhel"
-    # To Do
+    # TO IMPLEMENT
+    # Instructions here: http://www.rstudio.com/products/rstudio/download-server/
 end
+
+# Create RStudio Server user
+include_recipe "rstudio-server::rstudio_user"

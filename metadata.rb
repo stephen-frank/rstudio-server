@@ -8,6 +8,7 @@ version          "0.1.0"
 
 depends "apt"
 depends "gdebi"
+depends "r"
 
 supports "debian"
 supports "ubuntu"

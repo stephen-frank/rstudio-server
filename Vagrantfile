@@ -12,11 +12,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   use_nfs = false if ENV["VAGRANT_DISABLE_NFS"] == "true" 
   
   # Box name
-  config.vm.hostname = "fdd-dev"
+  config.vm.hostname = "test-rstudio-server"
   
   # Box details
-  config.vm.box = "ubuntu-precise-64-vbox"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box = "ubuntu-precise-32-vbox"
+  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  #config.vm.box = "ubuntu-precise-64-vbox"
+  #config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   
   # TO DO: Test other boxes... 32-bit Ubuntu, etc.
   
@@ -43,8 +45,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :cran_mirror => "http://cran.revolutionanalytics.com",
         :version => "3.1.0-1precise0"
       },
-      :rstudio-server => {
-        :arch => "i386"
+      :"rstudio-server" => {
+        :arch => "i386",
+        :rstudio_user => "rtest",
+        :rstudio_user_pwd => "hello_world"
       }
     }
     

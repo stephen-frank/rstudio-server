@@ -1,5 +1,5 @@
 #
-# Author:: Stephen Frank (<nicholas.long@.nrel.gov>)
+# Author:: Stephen Frank (<stephen.frank@.nrel.gov>)
 # Cookbook Name:: rstudio-server
 # Recipe:: libapparmor
 #
