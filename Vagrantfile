@@ -46,9 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :version => "3.1.0-1precise0"
       },
       :"rstudio-server" => {
-        :arch => "i386",
-        :rstudio_user => "rtest",
-        :rstudio_user_pwd => "hello_world"
+        :arch => "i386"
       }
     }
     
