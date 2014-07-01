@@ -13,5 +13,5 @@ default['rstudio-server']['source_url'] = "http://download2.rstudio.org/"
 
 default['rstudio-server']['make_rstudio_user'] = false
 default['rstudio-server']['rstudio_user'] = "rstudio"
-default['rstudio-server']['rstudio_user_password'] = "rstudio"
+default['rstudio-server']['rstudio_user_password'] = "$1$VgKjCBJP$Wa5oVsd7F28U9vBpjU5cE1" # "rstudio"
 default['rstudio-server']['rstudio_user_group'] = "users"

@@ -48,8 +48,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       :"rstudio-server" => {
         :arch => "amd64",
         :make_rstudio_user => true,
-        :rstudio_user => "r",
-        :rstudio_user_password => "test"
+        :rstudio_user => "rtest",
+        :rstudio_user_password => "$1$vIC1ProE$kJsRecvACe.2TxPpbKVBd0" # password = "test"
       }
     }
     
