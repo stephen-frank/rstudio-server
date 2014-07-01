@@ -15,10 +15,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "test-rstudio-server"
   
   # Box details
-  config.vm.box = "ubuntu-precise-32-vbox"
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-  #config.vm.box = "ubuntu-precise-64-vbox"
-  #config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  #config.vm.box = "ubuntu-precise-32-vbox"
+  #config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  config.vm.box = "ubuntu-precise-64-vbox"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   
   # TO DO: Test other boxes... 32-bit Ubuntu, etc.
   
@@ -46,7 +46,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :version => "3.1.0-1precise0"
       },
       :"rstudio-server" => {
-        :arch => "i386"
+        :arch => "amd64",
+        :make_rstudio_user => true,
+        :rstudio_user => "r",
+        :rstudio_user_password => "test"
       }
     }
     
