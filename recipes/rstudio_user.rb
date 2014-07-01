@@ -18,7 +18,6 @@ user node['rstudio-server']['rstudio_user'] do
   gid node['rstudio-server']['rserve_user_group']
   password node['rstudio-server']['rstudio_user_password']
   shell '/bin/bash'
-  system true
 end
 
 directory "/home/#{node['rstudio-server']['rstudio_user']}" do

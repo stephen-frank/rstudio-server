@@ -44,4 +44,6 @@ case node['platform_family']
 end
 
 # Create RStudio Server user
-include_recipe "rstudio-server::rstudio_user"
+if node['rstudio-server']['make_rstudio_user']
+  include_recipe "rstudio-server::rstudio_user"
+end
